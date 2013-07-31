@@ -13,6 +13,7 @@ $us=array_shift($usuarios->mostrar($_SESSION['idusuario']));
 <link href="<?php echo $folder;?>css/960/960.css" type="text/css" rel="stylesheet" media="screen">
 <link href="<?php echo $folder;?>css/tabcontent.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo $folder;?>css/core.css" type="text/css" rel="stylesheet" media="screen">
+<link href="<?php echo $folder;?>css/menu/style.css" type="text/css" rel="stylesheet" media="screen">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $folder; ?>imagenes/logo.ico" />
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/tabcontent.js"></script> 
