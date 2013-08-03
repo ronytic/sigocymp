@@ -6,11 +6,27 @@ $contrato=new contrato;
 $id=$_POST['id'];
 $nombre=$_POST['nombrecontrato'];
 $plantilla=htmlspecialchars($_POST['plantilla']);
+
+$codcontratante=$_POST['codcontratante'];
+$codobra=$_POST['codobra'];
+if(empty($codobra)){$codobra=0;}
+$cargocontrato=$_POST['cargocontrato'];
+$fechacontrato=$_POST['fechacontrato'];
+$tipocontrato=$_POST['tipocontrato'];
+$duracioncontrato=$_POST['duracioncontrato'];
+$salariocontrato=$_POST['salariocontrato'];
 //empieza la copia de archivos
 $valores=array("codempleado"=>"'$id'",
 				"nombrecontrato"=>"'$nombre'",
-					"contrato"=>"'$plantilla'",
-					);
+				"contrato"=>"'$plantilla'",
+				"codcontratante"=>$codcontratante,
+				"codobra"=>"$codobra",
+				"cargo"=>"'".$cargocontrato."'",
+				"fechacontrato"=>"'".$fechacontrato."'",
+				"tipocontrato"=>"'".$tipocontrato."'",
+				"duracioncontrato"=>"'".$duracioncontrato."'",
+				"salariocontrato"=>"'".$salariocontrato."'",
+				);
 					$contrato->insertar($valores);
 					$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 

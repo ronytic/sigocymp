@@ -1,7 +1,7 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Registro de Nueva Plantilla de Contrato";
+$titulo="Modificar Plantilla de Contrato";
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 include_once '../../class/plantilla.php';

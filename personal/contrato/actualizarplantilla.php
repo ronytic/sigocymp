@@ -17,6 +17,7 @@ $valores=array("nomplantilla"=>"'$nombre'",
 
 $titulo="Registro de Nuevo Plantilla";
 $folder="../../";
+$archivonuevo="nuevaplantilla.php";
 $archivolistar="listarplantilla.php";
 include_once '../../mensajeresultado.php';
 endif;?>
