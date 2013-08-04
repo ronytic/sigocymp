@@ -40,7 +40,7 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Cargo","cargo","text")?></td>
                     </tr>
                     <tr>
-                        <td><?php campos("FechaContrato","fechacontrato","date")?></td>
+                        <td><?php campos("FechaContrato","fechacontrato","date",date("Y-m-d"))?></td>
 					    <td><?php campos("Tipo de Contrato","tipocontrato","text","",0,array("required"=>"required","size"=>30));?></td>
                         <td><?php campos("Duración de Contrato","duracioncontrato","text","",0,array("required"=>"required","size"=>30));?></td>
                     </tr>

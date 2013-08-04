@@ -1,7 +1,7 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Registro de Contrato de Empleado";
+$titulo="Modificar Contrato de Empleado";
 include_once '../../funciones/funciones.php';
 include_once '../../class/empleado.php';
 include_once '../../class/contrato.php';
@@ -22,7 +22,7 @@ include_once '../../cabecerahtml.php';
     	<div class="prefix_1 grid_10 alpha">
 			<fieldset>
 				<div class="titulo"><?php echo $titulo?></div>
-                <form action="actualizarcontratoempleado.php" method="post">
+                <form action="actualizarcontratoempleado.php" method="post" enctype="multipart/form-data">
                 <?php campos("","id","hidden",$id);?>
 				<table class="tablareg">
 					<tr>
@@ -33,8 +33,20 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
 						<td>
-							Puede editar la plantilla cambiando los datos Esenciales para cada empleado. Todo el contrato se registrará.
-						<?php campos("Plantilla","plantilla","textarea",$con['contrato'],"",array("class"=>"ckeditor","rows"=>50,"cols"=>90));?></td>
+							Por Cuestión de seguridad no se permite la modificación del Contrato del persona, si cometío algun error en el registro elimine este contrato y vuelva a registrarlo.
+						<?php campos("Plantilla","plantilla","textarea",$con['contrato'],"",array("class"=>"ckeditor","rows"=>50,"cols"=>90,"disabled"=>"disabled"));?></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2"><?php campos("Archivo del Contrato","foto","file");?>
+                        <?php if($con['imgcontrato']!="" && file_exists("../fotocontratos/".$con['imgcontrato'])){?>
+                        <a href="../fotocontratos/<?php echo $con['imgcontrato']?>" target="_blank">
+                        Abrir Imagen<br>
+                        <img src="../fotocontratos/<?php echo $con['imgcontrato']?>" width="250">
+                        </a>
+                        <?php }else{
+							echo "No se Guardo Ningúna Imagen";	
+						}?>
+                        </td>
                     </tr>
 					<tr>
                     	<td><?php campos("Actualizar Contrato Empleado","guardar","submit");?></td>

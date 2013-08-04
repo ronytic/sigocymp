@@ -56,7 +56,7 @@ include_once '../../cabecerahtml.php';
     	<div class="prefix_1 grid_10 alpha">
 			<fieldset>
 				<div class="titulo"><?php echo $titulo?></div>
-                <form action="guardarcontratoempleado.php" method="post">
+                <form action="guardarcontratoempleado.php" method="post" enctype="multipart/form-data">
                 <?php campos("","id","hidden",$id);?>
                 <?php campos("","codcontratante","hidden",$codcontratante);?>
                 <?php campos("","idplantilla","hidden",$idplantilla);?>
@@ -76,7 +76,9 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
 						<td>
-							Puede editar la plantilla cambiando los datos Esenciales para cada empleado. Todo el contrato se registrará.<?php //print_r($_POST);?>
+							Puede editar la plantilla cambiando los datos Esenciales para cada empleado. Todo el contrato se registrará.<br>
+                           <strong>Nota: </strong>Por Cuestión de seguridad no se permite la modificación del Contrato del persona, si cometío algun error en el registro elimine este contrato y vuelva a registrarlo.
+				<?php //print_r($_POST);?>
 						<?php campos("Plantilla","plantilla","textarea",$detalleplantilla,"",array("class"=>"ckeditor","rows"=>50,"cols"=>90));?></td>
                     </tr>
                     <tr>

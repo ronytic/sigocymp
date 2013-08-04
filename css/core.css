@@ -265,11 +265,11 @@ input[type=submit].enviar,input[type=submit]{
 	padding:5px;
 }
 /*Fin de estilo de formulario*/
-a.enlace{
+a,a.enlace{
 	color:#0b74ab;
 	text-decoration:none;	
 }
-.enlace:hover{
+a:hover,.enlace:hover{
 	text-decoration:underline;	
 }
 a.boton{
