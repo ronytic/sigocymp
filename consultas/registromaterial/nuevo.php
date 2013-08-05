@@ -1,18 +1,12 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Registro de Empleado a Obra";
+$titulo="Registro de Nuevo Material";
 include_once '../../funciones/funciones.php';
-
-$n1archivo="empleado";
-include_once '../../class/'.$n1archivo.'.php';
-${$n1archivo}=new $n1archivo;
-$emp=todolista(${$n1archivo}->mostrarTodo(),"codempleado","nombre,appaterno"," ");
-$n2archivo="obra";
-include_once '../../class/'.$n2archivo.'.php';
-${$n2archivo}=new $n2archivo;
-$obra=todolista(${$n2archivo}->mostrarTodo(),"codobra","nombre","");
-
+$narchivo="licitacion";
+include_once '../../class/'.$narchivo.'.php';
+${$narchivo}=new $narchivo;
+$lic=todolista(${$narchivo}->mostrarTodo(),"codlicitacion","titulo","");
 include_once '../../cabecerahtml.php';
 ?>
 <?php include_once '../../cabecera.php';?>
@@ -24,15 +18,13 @@ include_once '../../cabecerahtml.php';
                 <form action="guardar.php" method="post" enctype="multipart/form-data">
 				<table class="tablareg">
 					<tr>
-						<td colspan="2"><?php campos("Empleado","codempleado","select",$emp,0);?></td>
-                        
-                    </tr>
-					<tr>
-                    	<td colspan="2"><?php campos("Obra","codobra","select",$obra,0);?></td>
-                        
+						<td colspan="2"><?php campos("Material","nombre","text","",1,array("required"=>"required","size"=>"50"));?></td>
 					</tr>
 					<tr>
-						<td colspan="2"><?php campos("Cargo","cargo","text","",0,array("size"=>50));?></td>
+                    	<td colspan="2"><?php campos("Unidad Medida","unidadmedida","text","",0,array("required"=>"required","size"=>"50"));?></td>
+					</tr>
+                    <tr>
+						<td colspan="2"><?php campos("Precio Unitario","preciounitario","text","",0,array("required"=>"required","size"=>"50"));?></td>
 					</tr>
 					<tr><td></td><td><?php campos("Guardar","guardar","submit");?></td><td></td></tr>
 				</table>

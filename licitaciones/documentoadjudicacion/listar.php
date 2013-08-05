@@ -6,7 +6,7 @@ include_once("../../funciones/funciones.php");
 $narchivo="adjudicacion";
 include_once '../../class/'.$narchivo.'.php';
 ${$narchivo}=new $narchivo;
-$datos=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,entidad","-");
+$datos=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,objetocontratacion","-");
 
 $n1archivo="documentocomun";
 include_once '../../class/'.$n1archivo.'.php';

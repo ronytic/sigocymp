@@ -1,13 +1,13 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Registro de Nuevos Documentos de Adjudicación";
+$titulo="Registro de Nuevo Documento de Adjudicación";
 include_once '../../funciones/funciones.php';
 
 $n2archivo="adjudicacion";
 include_once '../../class/'.$n2archivo.'.php';
 ${$n2archivo}=new $n2archivo;
-$datos2=todolista(${$n2archivo}->mostrarTodo(),"codadjudicacion","codigoentidad,entidad","-");
+$datos2=todolista(${$n2archivo}->mostrarTodo(),"codadjudicacion","codigoentidad,objetocontratacion","-");
 
 $n1archivo="documentocomun";
 include_once '../../class/'.$n1archivo.'.php';
@@ -25,7 +25,7 @@ include_once '../../cabecerahtml.php';
                 <form action="guardar.php" method="post" enctype="multipart/form-data">
 				<table class="tablareg">
                     <tr>
-						<td colspan="2"><?php campos("Adjudicación","codadjudicacion","select",$datos2);?></td>
+						<td colspan="2"><?php campos("Adjudicación","codadjudicacion","select",$datos2,0,"",$_GET['codadjudicacion']);?></td>
 					</tr>
                      <tr>
 						<td colspan="2"><?php campos("Documento Común","coddocumentocomun","select",$datos1);?></td>

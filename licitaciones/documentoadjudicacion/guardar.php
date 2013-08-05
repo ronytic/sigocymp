@@ -13,6 +13,7 @@ $narchivo="documentoadjudicacion";
 	$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 
 $codinsercion=${$narchivo}->last_id();
+$archivonuevo="nuevo.php?codadjudicacion=$codadjudicacion";
 $titulo="Confirmacion de Guardado";
 $folder="../../";
 include_once '../../mensajeresultado.php';

@@ -7,7 +7,7 @@ $narchivo="adjudicacion";
 include_once '../../class/'.$narchivo.'.php';
 ${$narchivo}=new $narchivo;
 
-$datos=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,entidad","-");
+$datos=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,objetocontratacion","-");
 include_once "../../cabecerahtml.php";
 ?>
 <?php include_once "../../cabecera.php";?>

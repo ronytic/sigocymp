@@ -9,7 +9,7 @@ if (!empty($_POST)) {
 	$directorio="../documentosadjudicacion/";
 	$datos=${$narchivo}->mostrarTodo("titulo LIKE '%$titulo%' and descripcion LIKE '%$descripcion%' and codadjudicacion LIKE '%$codadjudicacion%'");
 	$titulo=array("titulo"=>"Titulo","descripcion"=>"descripcion","archivodigital"=>"Archivo Digital");
-	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","ver.php");
+	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","");
 		
 }
 ?>

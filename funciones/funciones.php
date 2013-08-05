@@ -29,12 +29,12 @@ function listadotabla($titulo,$datos,$enlaces=0,$modifica="",$elimina="",$ver=""
 			<td><?php archivo($d[$k]);?></td>
 			<?php
 		}
-		$ver=0;
+		//$ver=0;
 		if($enlaces==1){
 			$id=array_shift($d);
 			if(!empty($ver)){
 			?>
-				<td><a href="<?php echo $ver;?>?id=<?php echo $id;?>" class="boton ver"><img src="<?php echo $folder; ?>imagenes/iconos/ver.png" alt="Ver" title="Ver"></a></td>
+				<td><a href="<?php echo $ver;?>?id=<?php echo $id;?>" class="boton ver" target="_blank"><img src="<?php echo $folder; ?>imagenes/iconos/ver.png" alt="Ver" title="Ver"></a></td>
 			<?php
 			}
 			if(!empty($modifica)){
@@ -70,10 +70,10 @@ function archivo($nombrearchivo){
 	$datos=tipoarchivo($nombrearchivo);
 	$rdato="";
 	switch($datos){
-		case 'pdf':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/pdf.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
-		case 'jpg':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/image.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
-		case 'doc':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/doc.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
-		case 'docx':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/doc.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;	
+		case 'pdf':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" target="_blank" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/pdf.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
+		case 'jpg':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" target="_blank" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/image.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
+		case 'doc':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" target="_blank" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/doc.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;
+		case 'docx':{ ?> <a href="<?php echo $directorio.$nombrearchivo;?>" target="_blank" class="enlace"><img src="<?php echo $folder."imagenes/iconoarchivo/doc.gif";?>"><?php echo substr($nombrearchivo,0,10);?></a><?php }break;	
 		default:{echo $nombrearchivo;}break;
 	}
 }
@@ -95,10 +95,11 @@ function subirarchivo($archivo,$directorio,$tipo="documento",$peso="500000000"){
 function todolista($datos,$k,$v,$separador=" "){
 	$data=array();
 	foreach($datos as $d){
-		$valor="";
+		$valor=array();
 		foreach(explode(",",$v) as $val){
-			$valor.=$d[$val]." ".$separador." ";	
+			array_push($valor,$d[$val]);
 		}
+		$valor=implode(" ".$separador." ",$valor);
 		$data[$d[$k]]=$valor;
 	}
 	return $data;

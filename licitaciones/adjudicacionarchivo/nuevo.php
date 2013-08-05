@@ -6,7 +6,7 @@ include_once '../../funciones/funciones.php';
 $narchivo="adjudicacion";
 include_once '../../class/'.$narchivo.'.php';
 ${$narchivo}=new $narchivo;
-$adj=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,entidad","-");
+$adj=todolista(${$narchivo}->mostrarTodo(),"codadjudicacion","codigoentidad,objetocontratacion","-");
 include_once '../../cabecerahtml.php';
 ?>
 <?php include_once '../../cabecera.php';?>
@@ -27,7 +27,7 @@ include_once '../../cabecerahtml.php';
 						<td colspan="2"><?php campos("Descripción","descripcion","text","",0,array("required"=>"required","size"=>"50"));?></td>
 					</tr>
                     <tr>
-						<td colspan="2"><?php campos("Adjudicación","codadjudicacion","select",$adj);?></td>
+						<td colspan="2"><?php campos("Adjudicación","codadjudicacion","select",$adj,0,"",$_GET['codadjudicacion']);?></td>
 					</tr>
                     <tr>
                     	<td colspan="2"><?php campos("Observación","obs","textarea","",0,array("rows"=>"10","cols"=>"40"));?></td>

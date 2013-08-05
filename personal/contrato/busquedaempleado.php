@@ -20,7 +20,7 @@ if (!empty($_POST)) {
 		case "registrado":{
 			$emp=$contrato->contratoEmpleado("e.nombre LIKE '%$nombre%' and e.appaterno LIKE '%$apep%' and e.apmaterno LIKE '%$apem%' and e.ci LIKE '%$ci%' and e.codempleado=c.codempleado");
 			$titulo=array("nombrecontrato"=>"Nombre","nombre"=>"Nombre","appaterno"=>"Apellido Paterno","apmaterno"=>"Apellido Materno","ci"=>"C.I.","cargo"=>"Cargo");
-			listadoTabla($titulo,$emp,1,"modificarcontrato.php","eliminarcontrato.php","vercontrato.php");
+			listadoTabla($titulo,$emp,1,"modificarcontrato.php","eliminarcontrato.php","");
 					}break;
 	}
 	

@@ -44,7 +44,7 @@ include_once '../../cabecerahtml.php';
                         <img src="../fotocontratos/<?php echo $con['imgcontrato']?>" width="250">
                         </a>
                         <?php }else{
-							echo "No se Guardo Ningúna Imagen";	
+							echo "No se Guardo Ninguna Imagen";	
 						}?>
                         </td>
                     </tr>

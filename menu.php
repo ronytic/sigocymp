@@ -15,7 +15,7 @@ $submenu=new submenu;
         <?php if($m['submenu']){?>
             <ul>
               <?php foreach ($submenu->mostrarSubMenu($nivel,$m['idmenu']) as $sb): ?>
-                <li><a href="<?php echo $folder?><?php echo $m['url'] ?><?php echo $sb['url'] ?>" class="botonsubmenu"><?php echo $sb['nombre'] ?></a></li>	
+                <li><a href="<?php echo $folder?><?php echo $m['url'] ?><?php echo $sb['url'] ?>" class="botonsubmenu"><img src="<?php echo $folder; ?>imagenes/ico/<?php echo $sb['imagen']==""?'tick.png':$sb['imagen']; ?>" height="20" align="middle" /> <?php echo $sb['nombre'] ?></a></li>	
               <?php endforeach ?>
             </ul>
         <?php }?>

@@ -8,6 +8,6 @@ if (!empty($_POST)) {
 	$plantilla=new plantilla;
 	$plan=$plantilla->mostrarTodo("nomplantilla LIKE '%$nombre%' and desplantilla LIKE '%$descripcion%'");
 	$titulo=array("nomplantilla"=>"Nombre","desplantilla"=>"Descripcion");
-	listadoTabla($titulo,$plan,1,"modificarplantilla.php","eliminarplantilla.php","verplantilla.php");
+	listadoTabla($titulo,$plan,1,"modificarplantilla.php","eliminarplantilla.php","");
 }
 ?>

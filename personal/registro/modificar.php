@@ -35,10 +35,29 @@ include_once '../../cabecerahtml.php';
 					</tr>
                     <tr>
                     	<td colspan="2"><?php campos("Fotografía","foto","file");?></td>
+                        <td><?php 
+						$ar="../foto/".$emp['foto'];
+						if($emp['foto']!="" && file_exists($ar)){?>
+                        <a href="<?php echo $ar?>" target="_blank">
+                        Abrir Imagen<br>
+                        <img src="<?php echo $ar?>" width="250">
+                        </a>
+                        <?php }else{
+							echo "No se Guardo Ninguna Imagen";	
+						}?></td>
                     </tr>
 					<tr>
 						
                         <td colspan="2"><?php campos("Curriculum Vitae","curriculum","file");?></td>
+                        <td><?php 
+						$ar="../curriculum/".$emp['curriculum'];
+						if($emp['curriculum']!="" && file_exists($ar)){?>
+                        <a href="<?php echo $ar?>" target="_blank">
+                        Abrir Archivo<br>
+                        </a>
+                        <?php }else{
+							echo "No se Guardo Ningún Archivo";	
+						}?></td>
 					</tr>
 					<tr><td></td><td><?php campos("Modificar Empleado","guardar","submit");?></td><td></td></tr>
 				</table>
