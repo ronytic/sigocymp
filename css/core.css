@@ -471,6 +471,9 @@ table.ultimo tr:hover td{
 table.ultimo td.der{
 	padding-right: 10px;
 }
+table td{
+	vertical-align:top;	
+}
 /*fin tablas*/
 /*Tipo de alertas*/
 .rojoC{
@@ -503,5 +506,8 @@ table.ultimo td.der{
 }
 .der{
 	text-align:right;	
+}
+small{
+	font-size:11px;
 }
 /*Fin de Texto*/

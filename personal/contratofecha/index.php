@@ -1,8 +1,12 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Listado de Materiales de Herramienta";
+$titulo="Reporte de Contratos hasta la fecha";
 $folder="../../";
 include_once("../../funciones/funciones.php");
+
+include_once("../../class/obra.php");
+$obra=new obra;
+$listaobras=todoLista($obra->mostrarTodo(),"codobra","nombre","-");
 
 include_once "../../cabecerahtml.php";
 ?>
@@ -15,16 +19,15 @@ include_once "../../cabecerahtml.php";
             <form id="busqueda" action="busqueda.php" method="post">
                 <table class="tablabus">
                     <tr>
-                        <td><?php campos("Material","nombre","text","",1,array("size"=>15));?></td>
-                        <td><?php campos("Precio Unitario","preciounitario","text","",0,array("size"=>15));?></td>
-                        <td><?php campos("Unidad de Medida","unidadmedida","text","",0,array("size"=>15));?></td>
+                        <td><?php campos("Fecha limite de Contrato","fechacontrato","date",date('Y-m-d'),1,array("size"=>15));?></td>
+                        <td><?php campos("Obra <small>No seleccionar=Todos</small>","codobra","select",$listaobras,0);?></td>
+                        <td><?php campos("Tipo Contrato","tipocontrato","search","",0);?></td>
 					</tr>
                     <tr>
-                        <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
+                        <td><?php campos("Ver Reporte","enviar","submit","",0,array("size"=>15));?></td>
                     </tr>
                 </table>
             </form>
-            <a href="nuevo.php" class="botoninfo">Registrar Nuevo Material</a> <a href="vertodo.php" class="botonerror" target="_blank">Listado General de Materiales</a>
             </fieldset>
         </div>
         <div class="clear"></div>
