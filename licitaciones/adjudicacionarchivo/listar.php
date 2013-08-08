@@ -21,7 +21,7 @@ include_once "../../cabecerahtml.php";
                     <tr>
                         <td><?php campos("Titulo","titulo","text","",1,array("size"=>15));?></td>
                         <td><?php campos("Descripción","descripcion","text","",0,array("size"=>15));?></td>
-                        <td><?php campos("Adjudicación ","codadjudicacion","select",$datos,0);?></td>
+                        <td><?php campos("Adjudicación ","codadjudicacion","select",$datos,0,"",$_GET['id']);?></td>
                         
 					</tr>
                     <tr>
