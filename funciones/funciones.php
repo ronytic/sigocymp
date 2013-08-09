@@ -358,4 +358,7 @@ function mostrarI($datos){
 		$pdf->Ln(10);
 	}
 }
+function porcentaje($total,$cantidad){
+	return round(($cantidad*100)/$total,1);
+}
 ?>
