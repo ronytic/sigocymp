@@ -19,3 +19,11 @@ $us=array_shift($usuarios->mostrar($_SESSION['idusuario']));
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/tabcontent.js"></script> 
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/jquery.form.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/busquedas/busquedas.js"></script>
+<link href="<?php echo $folder;?>css/ui/jquery.ui.all.css" type="text/css" rel="stylesheet" media="screen">
+<script src="<?php echo $folder;?>js/ui/jquery.ui.core.js" language="javascript"></script>
+<script src="<?php echo $folder;?>js/ui/jquery.ui.datepicker.js" language="javascript"></script>
+<script language="javascript">
+$(document).ready(function(e) {
+    $('input[type=date]').click(function(e){e.preventDefault();}).datepicker();
+});
+</script>

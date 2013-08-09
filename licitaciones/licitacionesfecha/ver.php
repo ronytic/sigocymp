@@ -9,11 +9,11 @@ class PDF extends PPDF{
 		$this->CuadroCabecera(50,"Fecha de Referencia:",20,$fecha);
 		$this->Ln();
 		$this->TituloCabecera(10,"N");
-		$this->TituloCabecera(50,"titulo");
-		$this->TituloCabecera(70,"descripcion");
-		$this->TituloCabecera(35,"entidad");
-		$this->TituloCabecera(30,"fechapublicacion");
-		$this->TituloCabecera(50,"observación");
+		$this->TituloCabecera(50,"Título");
+		$this->TituloCabecera(70,"Descripcion");
+		$this->TituloCabecera(35,"Entidad");
+		$this->TituloCabecera(30,"FechaPublicación");
+		$this->TituloCabecera(50,"Observación");
 	}	
 }
 

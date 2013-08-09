@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Reporte de Licitaciones presentadas hasta la Fecha";
+$titulo="Reporte de General de Adjudicaciones";
 $folder="../../";
 include_once("../../funciones/funciones.php");
 
