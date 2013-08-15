@@ -29,6 +29,9 @@ include_once '../../cabecerahtml.php';
 						<td colspan="2"><?php campos("Código de fabricación","codigodefabricacion","text","",0,array("size"=>"50"));?></td>
 					</tr>
                     <tr>
+						<td colspan="2"><?php campos("Tiempo de Vida en meses","tiempovida","text","",0,array("size"=>"50","max-size"=>10));?></td>
+					</tr>
+                    <tr>
 						<td colspan="2"><?php campos("Proveedor de repuesto","codproveedorrepuesto","select",$pror);?></td>
                     </tr>
 					<tr><td></td><td><?php campos("Guardar","guardar","submit");?></td><td></td></tr>

@@ -22,7 +22,7 @@ $obra=todolista(${$n2archivo}->mostrarTodo(),"codobra","nombre","");
 $n3archivo="maquinaria";
 include_once '../../class/'.$n3archivo.'.php';
 ${$n3archivo}=new $n3archivo;
-$maq=todolista(${$n3archivo}->mostrarTodo(),"codmaquinaria","descrip,tipo","-");
+$maq=todolista(${$n3archivo}->mostrarTodo(),"codmaquinaria","descrip,tipo,estado","-");
 
 include_once '../../cabecerahtml.php';
 ?>

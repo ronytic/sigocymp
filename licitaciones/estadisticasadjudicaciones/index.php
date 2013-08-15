@@ -19,7 +19,7 @@ $cantidadTotal=count($adjudicacion->mostrarTodo());
 //echo $cantidadTotal;
 
 foreach($adjudicacion->CantidadPorGrupo() as $ad){
-	echo "['".$ad['entidad']."', ".porcentaje($cantidadTotal,$ad['Cantidad'])."],";	
+	//echo "['".$ad['entidad']."', ".porcentaje($cantidadTotal,$ad['Cantidad'])."],";	
 }
 
 include_once "../../cabecerahtml.php";
@@ -90,7 +90,7 @@ include_once "../../cabecerahtml.php";
                 data: [
 					<?php
 					foreach($adjudicacion->CantidadPorGrupo() as $ad){
-	echo "['".$ad['entidad']."', ".porcentaje($cantidadTotal,$ad['Cantidad'])."],";	
+	echo "['".$ad['entidad']." - ".$ad['Cantidad']."', ".porcentaje($cantidadTotal,$ad['Cantidad'])."],";	
 }
 					?>
                     /*['Firefox',   45.0],

@@ -35,6 +35,21 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Horometro Compra","horometro","text",$maq['horometrocompra']);?></td>
 					</tr>
                     <tr>
+                    	<td colspan="3"><?php campos("Foto","foto","file","");?></td>
+                    </tr>
+                    <tr>
+                    <td colspan="3"><?php 
+						$ar="../foto/".$maq['foto'];
+						if($maq['foto']!="" && file_exists($ar)){?>
+                        <a href="<?php echo $ar?>" target="_blank">
+                        Abrir Imagen<br>
+                        <img src="<?php echo $ar?>" width="250">
+                        </a>
+                        <?php }else{
+							echo "No se Guardo Ninguna Imagen";	
+						}?></td>
+                    </tr>
+                    <tr>
                     	<td colspan="3"><?php campos("Observación de la Maquina","observacion","textarea",$maq['obsmaq'],0,array("cols"=>30,"rows"=>4));?></td>
                     </tr>
 					<tr><td></td><td><?php campos("Guardar Maquinaria","guardar","submit");?></td><td></td></tr>

@@ -5,6 +5,11 @@ $narchivo="obramaquinaria";
 include_once '../../class/'.$narchivo.'.php';
 ${$narchivo}=new $narchivo;
 extract($_POST);
+
+include_once("../../class/maquinaria.php");
+$maquinaria=new maquinaria;
+$maquinaria->actualizar(array("estado"=>"'ocupado'"),"$codmaquinaria");
+
 $valores=array("codmaquinaria"=>"'$codmaquinaria'",
 					"codempleadooperador"=>"'$codempleado'",
 					"codobra"=>"'$codobra'",

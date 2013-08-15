@@ -36,7 +36,7 @@ include_once '../../cabecerahtml.php';
                     	<td colspan="4"><?php campos("Obra","codobra","select",$obra,0);?></td>
                     </tr>
 					<tr>
-						<td colspan="2"><?php campos("Fecha de Kardex","fechakardex","date","",1,array("size"=>30));?></td>
+						<td colspan="2"><?php campos("Fecha de Kardex","fechakardex","date",date("Y-m-d"),1,array("size"=>30));?></td>
                         
                     </tr>
                     <tr>
@@ -46,6 +46,16 @@ include_once '../../cabecerahtml.php';
                     <tr>
 	                    <td colspan="2"><?php campos("Hora Ingreso","horaingreso","text","",1,array("size"=>30));?></td>
                     	<td colspan="2"><?php campos("Hora Salida","horasalida","text","",1,array("size"=>30));?></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="1"><?php campos("Combustible","combustible","text","",1,array("size"=>10));?> Lts.</td>
+                        <td colspan="1"><?php campos("Motor","motor","text","",1,array("size"=>10));?> Lts.</td>
+                        <td colspan="1"><?php campos("Mandos Finales","mandosfinales","text","",1,array("size"=>10));?> Lts.</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="1"><?php campos("Grasa","grasa","text","",1,array("size"=>10));?> Kg.</td>
+                        <td colspan="1"><?php campos("Sistema Hidraulico","sistemahidraulico","text","",1,array("size"=>10));?> Lts.</td>
+                        <td colspan="1"><?php campos("Transmisión","transmision","text","",1,array("size"=>10));?> Lts.</td>
                     </tr>
                     <tr>
                     	<td colspan="4"><?php campos("Detalle Servicio","detalleservicio","textarea","",1,array("size"=>30,"cols"=>50,"rows"=>10));?></td>

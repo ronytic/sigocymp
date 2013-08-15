@@ -9,6 +9,7 @@ $narchivo="repuesto";
 	$valores=array("descripcion"=>"'$descripcion'",
 					"precio"=>"'$precio'",
 					"tipo"=>"'$tipo'",
+					"tiempovida"=>"'$tiempovida'",
 					"codigodefabricacion"=>"'$codigodefabricacion'",
 					"codproveedorrepuesto"=>"'$codproveedorrepuesto'",
 				);

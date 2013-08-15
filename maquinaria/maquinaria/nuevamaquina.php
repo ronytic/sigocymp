@@ -29,8 +29,7 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Horometro Compra","horometro","text");?></td>
 					</tr>
                     <tr>
-                    	<td colspan="3"><?php campos("Empleado","empleado","select",$val);?></td>
-                        
+                    	<td colspan="3"><?php campos("Foto","foto","file","");?></td>
                     </tr>
                     <tr>
                     	<td colspan="3"><?php campos("Observación de la Maquina","observacion","textarea","",0,array("cols"=>30,"rows"=>4));?></td>

@@ -13,6 +13,12 @@ extract($_POST);
 					"horometrofin"=>"'$horometrofin'",
 					"horaingreso"=>"'$horaingreso'",
 					"horasalida"=>"'$horasalida'",
+					"combustible"=>"'$combustible'",
+					"motor"=>"'$motor'",
+					"mandosfinales"=>"'$mandosfinales'",
+					"grasa"=>"'$grasa'",
+					"sistemahidraulico"=>"'$sistemahidraulico'",
+					"transmision"=>"'$transmision'",
 					"detalleservicio"=>"'$detalleservicio'",
 					"obs"=>"'$obs'",
 				);
