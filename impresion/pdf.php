@@ -101,8 +101,7 @@ include_once("fpdf/fpdf.php");
 		}
 		function Footer()
 		{	global $lema,$idioma;
-			//$this->Cell($this->ancho,0,"",1,1);
-			
+			// Cell($this->ancho,0,"",1,1);
 			// Posición: a 1,5 cm del final
 			$this->SetY(-15);
 			// Arial italic 8
