@@ -6,7 +6,9 @@ include_once("fpdf/fpdf.php");
 		var $ancho=176;
 		function Header(){
 			global $idioma;
-			if($this->CurOrientation=="P"){$this->ancho=176;}else{$this->ancho=246;}
+			if($this->CurOrientation=="P"){$this->ancho=$this->w-34;}else{$this->ancho=$this->w-40;}	
+			
+			
 			$this->SetLeftMargin(18);
 			$this->SetAutoPageBreak(true,15);
 			global $title,$gestion,$titulo,$logo,$idioma;

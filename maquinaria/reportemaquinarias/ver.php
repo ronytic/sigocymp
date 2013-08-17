@@ -6,8 +6,8 @@ extract($_GET);
 class PDF extends PPDF{
 	function Cabecera(){
 		global $fecha,$anio,$mes,$dias;
-		$this->CuadroCabecera(50,"Fecha de Referencia:",20,$fecha);
-		$this->Ln();
+		//$this->CuadroCabecera(50,"Fecha de Referencia:",20,$fecha);
+		//$this->Ln();
 		$this->TituloCabecera(10,"N");
 		$this->TituloCabecera(70,"Descripción");
 		$this->TituloCabecera(20,"Altura");
